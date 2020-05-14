@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kerli Aava</title>
+    <link rel="icon" type="image/png" href="/images/logo.ico">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Montserrat:100|Raleway&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.10.0/rellax.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<body>
+
+    <div data-scroll-section>
+        <div class="o-container">
+            <header class="c-header" id="header">
+                <div class="c-header_heading" data-scroll data-scroll-speed="-8" data-scroll-position="top"
+                    data-scroll-target="#header">
+                    <div class="o-layout">
+                        <div class="o-layout_item u-1/2" data-scroll data-scroll-direction="horizontal"
+                            data-scroll-speed="-2" data-scroll-position="top" data-scroll-target="#header">
+                            <span class="u-label c-header_heading_label">
+                                <a href="/">
+                                    Locomotive.ca
+                                </a>
+                            </span>
+                        </div>
+                        <div class="o-layout_item u-1/2" data-scroll data-scroll-direction="horizontal"
+                            data-scroll-speed="2" data-scroll-position="top" data-scroll-target="#header">
+                            <div class="u-text-right">
+                                <p class="u-label c-header_heading_label">
+                                    v3 – Edition
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="c-header_title o-h1" data-scroll>
+                    <span class="c-header_title_line">
+                        <span data-scroll data-scroll-speed="3" data-scroll-position="top">Locomotive</span>
+                    </span>
+                    <span class="c-header_title_line">
+                        <span data-scroll data-scroll-speed="2" data-scroll-position="top">Scroll</span>
+                    </span>
+                    <span class="c-header_title_line -version u-white">
+                        <span class="o-h1" data-scroll data-scroll-speed="3" data-scroll-position="top"
+                            data-scroll-delay="0.05">v</span><span class="o-h1" data-scroll data-scroll-speed="5"
+                            data-scroll-position="top" data-scroll-delay="0.05">3</span><span class="o-h1" data-scroll
+                            data-scroll-speed="2" data-scroll-position="top" data-scroll-delay="0.05">.</span><span
+                            class="o-h1" data-scroll data-scroll-speed="4" data-scroll-position="top"
+                            data-scroll-delay="0.05">0</span>
+                    </span>
+                </h1>
+                <hr class="c-header_line" data-scroll data-scroll-offset="100" />
+                <a class="c-header_logo" href="https://locomotive.ca" target="_blank">
+                    <svg role="img">
+                        <use xlink:href="dist/images/sprite.svg#logo"></use>
+                    </svg>
+                </a>
+            </header>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script>
+        AOS.init({
+            offset: 500,
+            duration: 1000
+        });
+        var rellax = new Rellax(".rellax");
+
+        var textWrapper = document.querySelector('.ml16');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        anime.timeline({
+                loop: true
+            })
+            .add({
+                targets: '.ml16 .letter',
+                translateY: [-100, 0],
+                easing: "easeOutExpo",
+                duration: 1400,
+                delay: (el, i) => 30 * i
+            }).add({
+                targets: '.ml16',
+                opacity: 0,
+                duration: 1000,
+                easing: "easeOutExpo",
+                delay: 1000
+            });
+
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        };
+    </script>
+</body>
+
+<script nomodule src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.6.0/polyfill.min.js"
+    crossorigin="anonymous"></script>
+<script nomodule
+    src="https://polyfill.io/v3/polyfill.min.js?features=Object.assign%2CElement.prototype.append%2CNodeList.prototype.forEach%2CCustomEvent%2Csmoothscroll"
+    crossorigin="anonymous"></script>
+
+<script src="dist/scripts/main.js"></script>
+
+</html>
